@@ -1,0 +1,33 @@
+﻿<mah:MetroWindow x:Class="Super_Manager.ConnectScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:dialogs="clr-namespace:SimpleDialogs.Controls;assembly=SimpleDialogs"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:enumerators="clr-namespace:SimpleDialogs.Enumerators;assembly=SimpleDialogs"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        LeftWindowCommandsOverlayBehavior="Never"        
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        xmlns:local="clr-namespace:Super_Manager"
+        mc:Ignorable="d"
+        Title="Connection" Height="363.97" Width="284.769">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Connection à Windows Server" Margin="25,10,25,281" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16"/>
+        <Label Content="Adresse IP du Serveur Windows" Margin="51,59,51,250" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Nom D'Utilisateur" Margin="51,125,51,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Mot de Passe" Margin="51,191,51,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="PsUserName" Margin="80,156,80,0" TextWrapping="Wrap" Text="Utilisateur" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="PsIp" Margin="80,90,80,0" TextWrapping="Wrap" Text="IP Serveur" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="PsPassword" Margin="79,222,79,0" VerticalAlignment="Top" Height="30" Password="password" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="2"/>
+        <Button x:Name="ConnectBtn" Content="Connection" Margin="79,273,79,0" Height="27" VerticalAlignment="Top" Click="ConnectBtn_Click"/>
+        <dialogs:DialogContainer />
+    </Grid>
+</mah:MetroWindow>
