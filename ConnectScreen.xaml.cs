@@ -34,6 +34,7 @@ namespace Super_Manager
         {
             ProgressDialog progressDialog = new ProgressDialog();
             progressDialog.ShowDialog();
+
         }
 
     }
