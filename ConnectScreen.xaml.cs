@@ -37,5 +37,19 @@ namespace Super_Manager
 
         }
 
+        private void BrowseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Create OpenFileDialog
+            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+
+            // Launch OpenFileDialog by calling ShowDialog method
+            Nullable<bool> result = openFileDlg.ShowDialog();
+            // Get the selected file name and display in a TextBox.
+            // Load content of file in a TextBlock
+            if (result == true)
+            {
+                CertifPath.Text = openFileDlg.FileName;
+            }
+        }
     }
 }

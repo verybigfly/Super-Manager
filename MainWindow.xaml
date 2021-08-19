@@ -32,7 +32,9 @@
         </Grid.ColumnDefinitions>
         <TabControl Style="{DynamicResource MahApps.Styles.TabControl.AnimatedSingleRow}" HorizontalAlignment="Left" Height="733" VerticalAlignment="Top" Width="1446" Grid.ColumnSpan="2">
             <TabItem Header="Info Système">
-                <Grid />
+                <Grid >
+                    <Label Content="Etat de la connection :" Margin="30,30,0,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Height="33"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Gestion des Services" IsEnabled="False">
                 <Grid>
@@ -56,5 +58,5 @@
             </TabItem>
         </TabControl>
     </Grid>
-    
+
 </mah:MetroWindow>
