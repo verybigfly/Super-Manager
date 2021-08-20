@@ -16,6 +16,7 @@ using MahApps.Metro.Controls;
 using ControlzEx.Theming;
 using MahApps.Metro.IconPacks;
 
+
 namespace Super_Manager
 {
     public partial class MainWindow : MetroWindow

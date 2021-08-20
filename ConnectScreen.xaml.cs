@@ -15,6 +15,13 @@ using MahApps.Metro.Controls;
 using ControlzEx.Theming;
 using MahApps.Metro.IconPacks;
 using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Security;
+using System.Xml;
+using System.IO;
+using System.Management;
+using System.Management.Automation;
+using System.Management.Automation.Runspaces;
 
 namespace Super_Manager
 {
@@ -50,6 +57,22 @@ namespace Super_Manager
             {
                 CertifPath.Text = openFileDlg.FileName;
             }
+            string userName = PsUserName.Text;
+            string password = PsPassword.Password;
+            var securestring = new SecureString();
+            foreach (Char c in password)
+            {
+                securestring.AppendChar(c);
+            }
+            PSCredential creds = new PSCredential(userName, securestring);
+            WSManConnectionInfo connectionInfo = new WSManConnectionInfo();
+
+            connectionInfo.ComputerName = PsIp.Text;
+            connectionInfo.Credential = creds;
+
+            Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo);
+            runspace.Open();
+            
         }
     }
 }
