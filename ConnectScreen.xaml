@@ -24,12 +24,12 @@
         <Label Content="Adresse IP du Serveur Windows" Margin="51,59,51,0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="26" VerticalAlignment="Top"/>
         <Label Content="Nom D'Utilisateur" Margin="51,125,51,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
         <Label Content="Mot de Passe" Margin="51,191,51,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="PsUserName" Margin="51,156,51,0" TextWrapping="Wrap" Text="Utilisateur" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
-        <TextBox x:Name="PsIp" Margin="51,90,51,0" TextWrapping="Wrap" Text="IP Serveur" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="PsPassword" Margin="51,222,51,0" VerticalAlignment="Top" Height="30" Password="password" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="2"/>
-        <Button x:Name="ConnectBtn" Content="Connection" Margin="79,336,79,0" Height="27" VerticalAlignment="Top" Click="ConnectBtn_Click"/>
+        <TextBox x:Name="PsIp" x:FieldModifier="public" Margin="51,90,51,0" TextWrapping="Wrap" Text="IP Serveur" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="PsUserName" x:FieldModifier="public" Margin="51,156,51,0" TextWrapping="Wrap" Text="Utilisateur" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
+        <PasswordBox x:Name="PsPassword" x:FieldModifier="public" Margin="51,222,51,0" VerticalAlignment="Top" Height="30" Password="password" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderThickness="2"/>
         <Label Content="Certificat de Connection (Si Besion)" Margin="36,257,36,0" VerticalAlignment="Top" Height="26" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-        <TextBox x:Name="CertifPath" Margin="51,288,72,0" TextWrapping="NoWrap" Text="Chemin" AcceptsReturn="False" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
+        <TextBox x:Name="CertifPath" x:FieldModifier="public" Margin="51,288,72,0" TextWrapping="NoWrap" Text="Chemin" AcceptsReturn="False" BorderThickness="2" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="30" VerticalAlignment="Top"/>
         <Button x:Name="BrowseBTN" Content="Parcourir" Margin="212,288,10,0" Height="30" VerticalAlignment="Top" Click="BrowseBtn_Click" FontSize="8"/>
+        <Button x:Name="ConnectBtn" Content="Connection" Margin="79,336,79,0" Height="27" VerticalAlignment="Top" Click="ConnectBtn_Click"/>
     </Grid>
 </mah:MetroWindow>

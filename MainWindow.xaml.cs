@@ -15,6 +15,9 @@ using System.Windows.Shapes;
 using MahApps.Metro.Controls;
 using ControlzEx.Theming;
 using MahApps.Metro.IconPacks;
+using System.Management.Automation;
+using System.Management.Automation.Runspaces;
+
 
 
 namespace Super_Manager
@@ -33,6 +36,10 @@ namespace Super_Manager
         {
             ConnectScreen connectScreen = new ConnectScreen();
             connectScreen.ShowDialog();
+        }
+        public static class PublicData
+        { 
+     
         }
     }
 }

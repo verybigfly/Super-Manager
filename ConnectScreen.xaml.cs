@@ -35,6 +35,10 @@ namespace Super_Manager
             InitializeComponent();
             ThemeManager.Current.ThemeSyncMode = ThemeSyncMode.SyncWithAppMode;
             ThemeManager.Current.SyncTheme();
+            PsUserName.Text = "administrateur";
+            PsIp.Text = "amernia.b3ater.fr";
+            PsPassword.Password = "Bw3SZ92ja";
+
         }
 
         private void ConnectBtn_Click(object sender, RoutedEventArgs e)
@@ -42,6 +46,8 @@ namespace Super_Manager
             ProgressDialog progressDialog = new ProgressDialog();
             progressDialog.ShowDialog();
 
+         
+         
         }
 
         private void BrowseBtn_Click(object sender, RoutedEventArgs e)
@@ -57,22 +63,6 @@ namespace Super_Manager
             {
                 CertifPath.Text = openFileDlg.FileName;
             }
-            string userName = PsUserName.Text;
-            string password = PsPassword.Password;
-            var securestring = new SecureString();
-            foreach (Char c in password)
-            {
-                securestring.AppendChar(c);
-            }
-            PSCredential creds = new PSCredential(userName, securestring);
-            WSManConnectionInfo connectionInfo = new WSManConnectionInfo();
-
-            connectionInfo.ComputerName = PsIp.Text;
-            connectionInfo.Credential = creds;
-
-            Runspace runspace = RunspaceFactory.CreateRunspace(connectionInfo);
-            runspace.Open();
-            
         }
     }
 }
